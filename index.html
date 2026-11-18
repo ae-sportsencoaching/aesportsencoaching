@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AE Sports &amp; Coaching | Personal training, sportmassage &amp; groepslessen</title>
+  <meta name="description" content="AE Sports & Coaching – personal training, sportmassage en groepslessen in de Kempen (Kasterlee, Retie, Turnhout). Beweeg · Groei · Bereik.">
+
+  <!-- Lettertypes (gratis via Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== NAVIGATIE ===== -->
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo" aria-label="AE Sports & Coaching – home">
+        <!-- Logo: het bestand 'logo-ae.png' moet in dezelfde map staan als deze pagina. -->
+        <img src="logo-ae.png" alt="Logo AE Sports & Coaching" class="logo-img"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+        <span class="logo-mark" style="display:none">AE</span>
+        <span class="logo-text">Sports <span class="amp">&amp;</span> Coaching</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Menu openen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" aria-label="Hoofdmenu">
+        <a href="index.html" class="active">Home</a>
+        <a href="aanbod.html">Aanbod</a>
+        <a href="over-mij.html">Over mij</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://wa.me/32468201330" data-wa class="btn btn-gold btn-small" target="_blank" rel="noopener">Afspraak maken</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="container hero-grid">
+       <div class="hero-inner">
+        <h1>Sterker, fitter en beter in je vel – <em>op jouw tempo.</em></h1>
+        <p class="hero-sub">
+          Personal training, sportmassage en groepslessen in de Kempen.
+          Persoonlijke begeleiding, afgestemd op jouw doelen, jouw lichaam en jouw leven.
+        </p>
+        <div class="hero-buttons">
+          <button type="button" class="btn btn-gold" data-open-contact>Stuur me een berichtje</button>
+          <a href="aanbod.html" class="btn btn-outline-navy">Bekijk het aanbod</a>
+        </div>
+       </div>
+       <div class="hero-logo">
+         <img src="logo-groot.png" alt="AE Sports & Coaching – Beweeg · Groei · Bereik">
+       </div>
+      </div>
+    </section>
+
+    <!-- ===== ACTIES ===== -->
+    <section class="promo-strip">
+      <div class="container promo-inner">
+        <!-- Deze actie verdwijnt automatisch na de datum in data-tot -->
+        <div class="promo" data-tot="2026-11-30">
+          <span class="promo-badge">-10%</span>
+          <p><strong>Sportmassage bij Superfit 2.0 Retie</strong><br>
+          Boek vóór 30 november en krijg 10% korting.</p>
+        </div>
+        <div class="promo">
+          <span class="promo-badge">-10%</span>
+          <p><strong>Partner van Fitzilla</strong><br>
+          Gebruik code <span class="code">AMY</span> voor 10% korting op <a href="https://www.fitzilla.be" target="_blank" rel="noopener">fitzilla.be</a> of in de winkel.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== AANBOD IN HET KORT ===== -->
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">Wat ik doe</p>
+        <h2>Mijn aanbod</h2>
+        <p class="section-intro">Van één-op-één training tot massage, online coaching en beweegmomenten voor groepen: in de fitness, bij jou thuis, bij je club of gewoon online.</p>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7v10M18 7v10M3 9.5v5M21 9.5v5M6 12h12"/></svg>
+            </div>
+            <h3>Personal training</h3>
+            <p>Training op maat, solo of duo. Bij Easy Active Studio in Kasterlee of gewoon bij jou thuis.</p>
+            <a href="aanbod.html#personal-training" class="card-link">Meer info →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 11V6a1.5 1.5 0 0 1 3 0v4M10 10V4.5a1.5 1.5 0 0 1 3 0V10M13 10V5.5a1.5 1.5 0 0 1 3 0V12M16 9a1.5 1.5 0 0 1 3 0v5a7 7 0 0 1-7 7h-1a6 6 0 0 1-5-2.7L3.5 14a1.5 1.5 0 0 1 2.4-1.8L7 13.5"/></svg>
+            </div>
+            <h3>Sportmassage &amp; taping</h3>
+            <p>Sneller herstel en een soepeler lijf. In Retie, in Turnhout, bij jou thuis of bij je sportclub.</p>
+            <a href="aanbod.html#sportmassage" class="card-link">Meer info →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2M10 9l1.5 1.5L14.5 7.5"/></svg>
+            </div>
+            <h3>Online coaching</h3>
+            <p>Een starters- of premiumpakket met schema en opvolging, en online begeleiding naar je wedstrijd toe.</p>
+            <a href="aanbod.html#online-coaching" class="card-link">Meer info →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="8" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M14.5 14.3A5 5 0 0 1 21 19"/></svg>
+            </div>
+            <h3>Groepslessen</h3>
+            <p>Samen sterker in een kleine groep, voor 50-plussers, ouder en kind of je eigen groepje. Op aanvraag.</p>
+            <a href="aanbod.html#groepslessen" class="card-link">Meer info →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-5h6v5M9.5 11h5M12 8.5v5"/></svg>
+            </div>
+            <h3>Zorg &amp; bedrijven</h3>
+            <p>Beweegmomenten in zorginstellingen en energieke bootcamps voor werknemers en werkgevers.</p>
+            <a href="aanbod.html#zorg-bedrijven" class="card-link">Meer info →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 11.2A2 2 0 0 1 15.8 21H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+            </div>
+            <h3>Schema's &amp; kaartensets</h3>
+            <p>Kant-en-klare trainingsschema's, challenges en oefenkaarten voor senioren in mijn Etsy-shop.</p>
+            <a href="aanbod.html#etsy" class="card-link">Meer info →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WAAROM AE ===== -->
+    <section class="section section-sage">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">Waarom AE Sports &amp; Coaching</p>
+          <h2>Begeleiding die bij jóu past</h2>
+          <p>
+            Hallo, ik ben <strong>Amy Eyers</strong>, afgestudeerd in Sport &amp; Bewegen.
+            Of je nu wilt starten met sporten, sterker wilt worden, beter wilt herstellen
+            of gewoon fit wilt blijven: ik help je met een aanpak die haalbaar is
+            en die je volhoudt.
+          </p>
+          <a href="over-mij.html" class="btn btn-navy">Leer mij kennen</a>
+        </div>
+
+        <ul class="usp-list">
+          <li>
+            <span class="usp-num">01</span>
+            <div><strong>Op maat</strong><br>Elk schema en elke sessie afgestemd op jouw niveau en doel.</div>
+          </li>
+          <li>
+            <span class="usp-num">02</span>
+            <div><strong>Persoonlijke opvolging</strong><br>Korte lijn via WhatsApp, mail of sociale media, zodat je nooit vastzit.</div>
+          </li>
+          <li>
+            <span class="usp-num">03</span>
+            <div><strong>Voor iedereen</strong><br>Van beginner tot sporter, van jong tot 50+.</div>
+          </li>
+          <li>
+            <span class="usp-num">04</span>
+            <div><strong>Flexibel</strong><br>In de fitness, buiten of bij jou thuis, met eigen materiaal.</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== CALL TO ACTION ===== -->
+    <section class="section cta">
+      <div class="container cta-inner">
+        <h2>Klaar om te starten?</h2>
+        <p>Stuur me een berichtje, dan bekijken we samen wat het best bij jou past.</p>
+        <div class="hero-buttons">
+          <a href="https://wa.me/32468201330" data-wa class="btn btn-gold" target="_blank" rel="noopener">WhatsApp: 0468 20 13 30</a>
+          <a href="mailto:aesportsencoaching@gmail.com" data-mail class="btn btn-outline-navy">Mail mij</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== KEUZEVENSTER: WHATSAPP OF MAIL ===== -->
+  <div class="modal" id="contact-modal" hidden>
+    <div class="modal-backdrop" data-close-contact></div>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button type="button" class="modal-close" aria-label="Sluiten" data-close-contact>&times;</button>
+      <h3 id="modal-title">Hoe wil je me contacteren?</h3>
+      <p>Kies wat jij het makkelijkst vindt. Er staat al een berichtje klaar dat je nog kan aanpassen.</p>
+
+      <a class="modal-option" data-wa target="_blank" rel="noopener">
+        <span class="modal-icon wa">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c.3 1.8 1.7 3.7 4 4.6l1.2-1.1 1.8.9-.4 1.6c-3.4.2-7.3-3.4-7.3-7.1l1.6-.4.9 1.8z" class="fill"/></svg>
+        </span>
+        <span><strong>WhatsApp</strong><br><small>Snel een berichtje sturen</small></span>
+      </a>
+
+      <a class="modal-option" data-mail>
+        <span class="modal-icon mail">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        </span>
+        <span><strong>E-mail</strong><br><small>aesportsencoaching@gmail.com</small></span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo logo-footer">
+          <span class="logo-mark">AE</span>
+          <span class="logo-text">Sports <span class="amp">&amp;</span> Coaching</span>
+        </a>
+        <p class="footer-tagline">Beweeg · Groei · Bereik</p>
+      </div>
+
+      <div>
+        <h4>Pagina's</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aanbod.html">Aanbod</a></li>
+          <li><a href="over-mij.html">Over mij</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://wa.me/32468201330" data-wa target="_blank" rel="noopener">WhatsApp: 0468 20 13 30</a></li>
+          <li><a href="mailto:aesportsencoaching@gmail.com" data-mail>aesportsencoaching@gmail.com</a></li>
+        </ul>
+        <div class="socials">
+          <a href="https://www.instagram.com/aesportsencoaching" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" class="fill"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@aesportsencoaching" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5M14 3c.4 2.6 2.2 4.4 5 4.6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> AE Sports &amp; Coaching – Amy Eyers · Ondernemingsnummer BE 1043.132.060</p>
+      <!-- Vul hier later je adres in, bijvoorbeeld: <p>Straat 1, 2460 Kasterlee</p> -->
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
