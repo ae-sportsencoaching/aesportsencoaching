@@ -981,3 +981,51 @@ p.eyebrow { color: var(--goud-dark) !important; }
 .location { display: flex; flex-direction: column; align-items: flex-start; }
 .location .btn { margin-top: auto; }
 .location-address, .location-hours { margin-bottom: 1.2rem; }
+
+/* ---------- Reviews ---------- */
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.review {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1.8rem;
+  box-shadow: var(--schaduw);
+  display: flex;
+  flex-direction: column;
+}
+.review-stars { color: var(--goud); font-size: 1.2rem; letter-spacing: 0.1em; }
+.review-stars span { color: #E3E0D6; }
+.review-text {
+  font-family: var(--font-titel);
+  font-style: italic;
+  font-size: 1.08rem;
+  color: var(--navy);
+  margin: 0.8rem 0 1.2rem;
+}
+.review-name { margin: auto 0 0; font-size: 0.92rem; color: var(--tekst-zacht); }
+.review-name strong { color: var(--navy); }
+.review-empty {
+  grid-column: 1 / -1;
+  background: #fff;
+  border: 2px dashed #D6DECE;
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: center;
+  color: var(--tekst-zacht);
+}
+.review-buttons { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+
+/* Verborgen elementen echt verbergen */
+[hidden] { display: none !important; }
+
+.btn-google { display: inline-flex; align-items: center; gap: 0.5rem; }
+.btn-google svg { width: 20px; height: 20px; fill: var(--navy); }
+.btn-google:hover svg { fill: #fff; }
+.review-empty small { display: block; margin-top: 0.4rem; font-size: 0.88rem; }
+
+button.btn-outline-navy { background: transparent; }
+button.btn-outline-navy:hover { background: var(--navy); }

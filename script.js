@@ -99,7 +99,24 @@ Contactpersoon en telefoonnummer:
 
 function maakLinks(onderwerp) {
   let waTekst, mailOnderwerp, vragen;
-  if (onderwerp) {
+  if (onderwerp === 'review') {
+    waTekst = 'Hallo Amy! Ik wil graag een review achterlaten over AE Sports & Coaching: ';
+    mailOnderwerp = 'Mijn review – AE Sports & Coaching';
+    vragen =
+`Ik wil graag een review achterlaten.
+
+Mijn voornaam (en eventueel gemeente):
+
+Voor welke dienst (bv. personal training, sportmassage, online coaching):
+
+Mijn score (1 tot 5 sterren):
+
+Mijn review:
+
+
+Mag deze review met mijn voornaam op de website verschijnen? (ja/nee)
+`;
+  } else if (onderwerp) {
     waTekst = `Hallo Amy! Ik kom via je website en heb interesse in ${onderwerp}. Kan je me meer info geven?`;
     mailOnderwerp = `Interesse in ${onderwerp} – via de website`;
     vragen = `Ik heb interesse in ${onderwerp}.\n\n` + (extraVragen[onderwerp] || 'Mijn vraag:\n');
@@ -109,15 +126,13 @@ function maakLinks(onderwerp) {
     vragen = algemeen.vragen;
   }
 
+  const gegevens = onderwerp === 'review' ? '' : 'Mijn naam:\nMijn telefoonnummer:\n\n';
   const mailTekst =
 `Hallo Amy,
 
 Ik kwam via je website bij AE Sports & Coaching terecht.
 ${vragen}
-Mijn naam:
-Mijn telefoonnummer:
-
-Alvast bedankt!
+${gegevens}Alvast bedankt!
 Met vriendelijke groeten`;
 
   return {
@@ -144,9 +159,11 @@ if (modal) {
     const l = maakLinks(onderwerp);
     modalWa.href = l.wa;
     modalMail.href = l.mail;
-    modalTitel.textContent = onderwerp
-      ? 'Interesse in ' + onderwerp + '?'
-      : 'Hoe wil je me contacteren?';
+    modalTitel.textContent = onderwerp === 'review'
+      ? 'Laat je review achter'
+      : onderwerp
+        ? 'Interesse in ' + onderwerp + '?'
+        : 'Hoe wil je me contacteren?';
     modal.hidden = false;
     document.body.style.overflow = 'hidden';
   };
@@ -161,6 +178,47 @@ if (modal) {
     b.addEventListener('click', closeModal));
   modal.querySelectorAll('.modal-option').forEach(a => a.addEventListener('click', closeModal));
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+}
+
+// =========================================================
+// REVIEWS (contactpagina)
+// Zet hier enkel ECHTE reviews, met toestemming van de klant.
+// Voorbeeld van één review (haal de // weg om te gebruiken):
+//   { naam: 'Sofie', plaats: 'Kasterlee', dienst: 'Sportmassage', sterren: 5,
+//     tekst: 'Hier komt de tekst van de review.' },
+// =========================================================
+const REVIEWS = [
+];
+
+// Plak hier later je Google-reviewlink (uit je Google Bedrijfsprofiel)
+const GOOGLE_REVIEW_LINK = 'https://g.page/r/CdF6nsPmDUYmEBM/review';
+
+const reviewLijst = document.getElementById('reviews-lijst');
+if (reviewLijst) {
+  if (REVIEWS.length === 0) {
+    reviewLijst.innerHTML =
+      '<div class="review-empty">Nog geen reviews op deze pagina. Ben jij de eerste? 💚<br><small>Je review op Google helpt anderen om mij te vinden.</small></div>';
+  } else {
+    REVIEWS.forEach(r => {
+      const kaart = document.createElement('article');
+      kaart.className = 'review';
+      const n = Math.max(0, Math.min(5, r.sterren || 5));
+      kaart.innerHTML =
+        '<div class="review-stars" aria-label="' + n + ' op 5 sterren">' +
+        '★'.repeat(n) + '<span>' + '★'.repeat(5 - n) + '</span></div>' +
+        '<p class="review-text"></p>' +
+        '<p class="review-name"><strong></strong> <span></span></p>';
+      kaart.querySelector('.review-text').textContent = '“' + r.tekst + '”';
+      kaart.querySelector('.review-name strong').textContent = r.naam + (r.plaats ? ', ' + r.plaats : '');
+      kaart.querySelector('.review-name span').textContent = r.dienst ? '· ' + r.dienst : '';
+      reviewLijst.appendChild(kaart);
+    });
+  }
+}
+const googleKnop = document.getElementById('google-review');
+if (googleKnop && GOOGLE_REVIEW_LINK) {
+  googleKnop.href = GOOGLE_REVIEW_LINK;
+  googleKnop.hidden = false;
 }
 
 // ---------- Acties met een einddatum automatisch verbergen ----------
