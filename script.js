@@ -196,8 +196,7 @@ const GOOGLE_REVIEW_LINK = 'https://g.page/r/CdF6nsPmDUYmEBM/review';
 const reviewLijst = document.getElementById('reviews-lijst');
 if (reviewLijst) {
   if (REVIEWS.length === 0) {
-    reviewLijst.innerHTML =
-      '<div class="review-empty">Nog geen reviews op deze pagina. Ben jij de eerste? 💚<br><small>Je review op Google helpt anderen om mij te vinden.</small></div>';
+    reviewLijst.hidden = true; // de Google-reviews staan erboven via Jotform
   } else {
     REVIEWS.forEach(r => {
       const kaart = document.createElement('article');

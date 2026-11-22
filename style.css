@@ -1029,3 +1029,5 @@ p.eyebrow { color: var(--goud-dark) !important; }
 
 button.btn-outline-navy { background: transparent; }
 button.btn-outline-navy:hover { background: var(--navy); }
+
+.reviews-widget { margin-top: 2rem; min-height: 40px; }
