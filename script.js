@@ -195,9 +195,9 @@ const GOOGLE_REVIEW_LINK = 'https://g.page/r/CdF6nsPmDUYmEBM/review';
 
 const reviewLijst = document.getElementById('reviews-lijst');
 if (reviewLijst) {
-  if (REVIEWS.length === 0) {
-    reviewLijst.hidden = true; // de Google-reviews staan erboven via Jotform
-  } else {
+  if (REVIEWS.length > 0) {
+    reviewLijst.hidden = false;
+    reviewLijst.style.display = '';
     REVIEWS.forEach(r => {
       const kaart = document.createElement('article');
       kaart.className = 'review';
