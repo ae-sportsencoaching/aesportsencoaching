@@ -1031,3 +1031,81 @@ button.btn-outline-navy { background: transparent; }
 button.btn-outline-navy:hover { background: var(--navy); }
 
 .reviews-widget { margin-top: 2rem; min-height: 40px; }
+
+/* ---------- Lesrooster groepslessen ---------- */
+.schedule-card { margin-top: 2rem; }
+.schedule { list-style: none; margin: 0.5rem 0 0; padding: 0; }
+.schedule li {
+  display: grid;
+  grid-template-columns: 110px 80px 1fr;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.9rem 0;
+  border-bottom: 1px dashed #E3E6DF;
+}
+.schedule li:last-child { border-bottom: 0; }
+.schedule-day { font-weight: 600; color: var(--navy); }
+.schedule-time { font-family: var(--font-titel); font-weight: 700; color: var(--goud-dark); font-size: 1.1rem; }
+.schedule-class strong { color: var(--navy); }
+.schedule-class small { display: block; color: var(--tekst-zacht); font-size: 0.88rem; }
+.badge-new {
+  display: inline-block;
+  background: var(--goud);
+  color: var(--navy);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  margin-left: 0.4rem;
+  vertical-align: middle;
+}
+.sub-title { margin-top: 3rem; font-size: 1.4rem; }
+@media (max-width: 560px) {
+  .schedule li { grid-template-columns: 1fr auto; gap: 0.2rem 1rem; }
+  .schedule-class { grid-column: 1 / -1; }
+}
+
+/* ---------- Foto's ---------- */
+.photo-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin: 2rem 0 0.5rem;
+}
+.photo-row-4 { grid-template-columns: repeat(4, 1fr); }
+.photo-row-single { grid-template-columns: minmax(0, 340px); }
+.photo-row figure { margin: 0; }
+.photo-row img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--schaduw);
+}
+.photo-row figcaption {
+  font-size: 0.85rem;
+  color: var(--tekst-zacht);
+  margin-top: 0.5rem;
+  text-align: center;
+}
+.gallery-section { padding-top: 0; }
+
+@media (max-width: 860px) {
+  .photo-row-4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 680px) {
+  .photo-row:not(.photo-row-single):not(.photo-row-4) {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 0.5rem;
+  }
+  .photo-row:not(.photo-row-single):not(.photo-row-4) figure {
+    flex: 0 0 72%;
+    scroll-snap-align: start;
+  }
+  .photo-row-single { grid-template-columns: minmax(0, 280px); }
+}

@@ -65,7 +65,7 @@ Mijn doel of wedstrijd (en datum):
 Hoe vaak train ik nu per week:
 `,
   'groepslessen':
-`Welke groepsles (Move & Smile / Mama & Kid / een groepsles voor mijn eigen groepje):
+`Welke groepsles (Circuittraining / Fit & Soepel 50+ / Mat pilates bij SuperFit 2.0 / Move & Smile / Mama & Kid / een groepsles voor mijn eigen groepje):
 
 Met hoeveel personen ongeveer:
 
